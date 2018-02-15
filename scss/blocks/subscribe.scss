@@ -1,0 +1,72 @@
+.subscribe {
+  background: url("../img/subscribe-bg.jpg") no-repeat center/cover;
+  border-bottom: 2px solid #edeff1;
+
+  &__wrapper {
+    @include container();
+    padding-top: 85px;
+    padding-bottom: 110px;
+
+    text-align: center;
+    color: #fff;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 15px;
+
+    font-weight: bold;
+    font-size: 1.9em;
+    line-height: 48px;
+    font-family: 'Roboto Slab', serif;
+  }
+
+  &__descr {
+    padding: 0 300px;
+    margin: 0;
+    margin-bottom: 40px;
+
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 24px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 510px;
+    margin: 0 auto;
+
+    input {
+      padding-left: 40px;
+      padding-right: 55px;
+      flex: 1;
+
+      font-size: 18px;
+      font-family: 'Roboto Slab', serif;
+      color: #fff;
+
+      border: 1px solid #eee;
+      background-color: rgba(255,255,255, .3);
+      outline: none;
+      @include border-radius(30px);
+
+      &::placeholder {
+        color: #fff;
+      }
+    }
+  }
+
+  &__btn {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-left: -50px;
+
+    &:active {
+      transform: none;
+    }
+  }
+}

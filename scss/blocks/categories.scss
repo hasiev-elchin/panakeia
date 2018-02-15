@@ -1,0 +1,40 @@
+.categories {
+  background-color: #d75d0e;
+
+  &__wrapper {
+    @include container();
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 90px;
+    padding-bottom: 80px;
+  }
+
+  &__list {
+    @include list-reset();
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    li {
+
+      a {
+        display: block;
+        padding: 3px;
+
+        text-decoration: none;
+        color: #fff;
+        transition: color .2s;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &:active {
+          color: #ccc;
+        }
+      }
+    }
+  }
+}

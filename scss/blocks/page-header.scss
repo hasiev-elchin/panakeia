@@ -1,0 +1,122 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+
+  background: url("../img/page-header-bg.jpg") no-repeat center/cover;
+
+  &__wrapper {
+    @include container();
+    padding-bottom: 50px;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 70px;
+
+    text-align: center;
+    font-weight: 300;
+    font-size: 4.5em;
+    line-height: 48px;
+    font-family: 'Roboto Slab', serif;
+    color: #fff;
+
+    span {
+      display: block;
+      margin-top: 15px;
+
+      font-weight: bold;
+      font-size: 1.9rem;
+    }
+  }
+
+  &__features {
+
+    &-list {
+      @include list-reset();
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-bottom: 70px;
+    }
+
+    &-item {
+      position: relative;
+      width: 370px;
+      padding-top: 170px;
+
+      text-align: center;
+      color: #fff;
+
+      &:hover {
+
+        &::before {
+          background-color: #dd4b2b;
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        display: block;
+        width: 150px;
+        height: 150px;
+        margin-left: -75px;
+
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-position: center;
+        @include border-radius(50%);
+        transition: background-color .3s;
+      }
+
+      &:nth-child(1) {
+
+        &::before {
+          background-image: url("../img/features-icon--1.png");
+        }
+      }
+
+      &:nth-child(2) {
+
+        &::before {
+          background-image: url("../img/features-icon--2.png");
+        }
+      }
+
+      &:nth-child(3) {
+
+        &::before {
+          background-image: url("../img/features-icon--3.png");
+        }
+      }
+    }
+
+    &-title {
+      display: block;
+      margin-bottom: 15px;
+
+      font-weight: bold;
+      font-size: 1.9em;
+      font-family: 'Roboto Slab', serif;
+    }
+
+    p {
+      padding: 0 20px;
+      margin: 0;
+
+      font-weight: 300;
+      font-size: 1em;
+      line-height: 30px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    &-btn {
+      font-weight: 300;
+    }
+  }
+}

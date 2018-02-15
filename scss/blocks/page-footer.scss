@@ -1,0 +1,26 @@
+.page-footer {
+  background: url("../img/subscribe-bg.jpg") no-repeat center/cover;
+
+  &__wrapper {
+    @include container();
+    padding-top: 90px;
+    padding-bottom: 100px;
+
+    p {
+      margin: 0;
+
+      text-align: center;
+      font-weight: 300;
+      font-size: 1.2em;
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        font-family: 'Roboto Slab', serif;
+        color: #fff;
+      }
+    }
+  }
+}
